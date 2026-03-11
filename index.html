@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +17,17 @@
     /* base override: inter, background, smoothness */
     body {
       font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: #f8fafc;  /* very light grey/off-white */
+      background-color: #f8fafc;
+      /* very light grey/off-white */
       margin: 0;
       padding: 0;
     }
+
     /* small custom shadow for cards (soft) */
     .card-shadow {
       box-shadow: 0 6px 14px rgba(0, 0, 0, 0.02), 0 2px 4px rgba(0, 0, 0, 0.02);
     }
+
     /* icon hover (optional subtle) */
     .icon-link:hover {
       opacity: 0.7;
@@ -31,6 +35,7 @@
     }
   </style>
 </head>
+
 <body class="antialiased text-slate-700 flex items-start justify-center min-h-screen p-4 md:p-6">
   <!-- main container: max-w-6xl (1200px) + background white? we keep body background, container card-like? 
        to stay minimal, just use a semi-transparent container? better to keep container simple background.
@@ -39,30 +44,34 @@
   <div class="w-full max-w-6xl bg-white/80 backdrop-blur-sm rounded-2xl p-5 md:p-8 shadow-sm border border-slate-100">
     <!-- two column grid: 30% / 70% on md+, stack on mobile -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
-      
+
       <!-- LEFT SIDEBAR (profile) ~ md:col-span-1 -->
       <aside class="md:col-span-1 flex flex-col items-start md:items-start space-y-5">
-        
-        <div class="w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center shadow-inner">
+
+        <div
+          class="w-32 h-32 md:w-36 md:h-36 rounded-full bg-gradient-to-br from-slate-200 to-slate-300 flex items-center justify-center shadow-inner">
           <!-- use a simple avatar icon from lucide? but it's not personal. I'll use a user icon to suggest profile picture. lucide 'user' but oversized? better use a text avatar -->
           <span class="text-4xl font-medium text-slate-600">NQT</span>
         </div>
         <!-- Name: bold, dark slate -->
         <h1 class="text-3xl md:text-4xl font-bold text-slate-800 tracking-tight">Nguyen Quoc Thinh</h1>
-        
+
         <!-- Quick links: horizontal icons (Resume, LinkedIn, GitHub) using lucide. we init with lucide.createIcons() later -->
         <div class="flex items-center space-x-5 pt-1">
-          <a href="./'NQT resume.pdf'" class="icon-link text-slate-600 hover:text-slate-900 transition" aria-label="Resume">
+          <a href="resume.pdf" target="_blank" class="icon-link text-slate-600 hover:text-slate-900 transition"
+            aria-label="Resume">
             <i data-lucide="file-text" class="w-5 h-5"></i>
           </a>
-          <a href="https://www.linkedin.com/in/qu%E1%BB%91c-th%E1%BB%8Bnh-nguy%E1%BB%85n-9a3130368/" class="icon-link text-slate-600 hover:text-slate-900 transition" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/qu%E1%BB%91c-th%E1%BB%8Bnh-nguy%E1%BB%85n-9a3130368/" target="_blank"
+            class="icon-link text-slate-600 hover:text-slate-900 transition" aria-label="LinkedIn">
             <i data-lucide="linkedin" class="w-5 h-5"></i>
           </a>
-          <a href="https://github.com/Sup4756?tab=overview&from=2025-11-01&to=2025-11-30" class="icon-link text-slate-600 hover:text-slate-900 transition" aria-label="GitHub">
+          <a href="https://github.com/Sup4756?tab=overview&from=2025-11-01&to=2025-11-30" target="_blank"
+            class="icon-link text-slate-600 hover:text-slate-900 transition" aria-label="GitHub">
             <i data-lucide="github" class="w-5 h-5"></i>
           </a>
         </div>
-        
+
         <!-- Bio text: clean paragraph with details -->
         <div class="space-y-3 text-base leading-relaxed text-slate-600 max-w-sm">
           <p>
@@ -78,15 +87,16 @@
           <span>Ho Chi Minh City, Vietnam</span>
         </div>
       </aside>
-      
+
       <!-- RIGHT COLUMN (portfolio section) ~ md:col-span-2 -->
       <main class="md:col-span-2">
         <!-- large Portfolio heading -->
-        <h2 class="text-4xl md:text-5xl font-medium text-slate-800 tracking-wide mb-7 border-b border-slate-200 pb-2">Portfolio</h2>
-        
+        <h2 class="text-4xl md:text-5xl font-medium text-slate-800 tracking-wide mb-7 border-b border-slate-200 pb-2">
+          Portfolio</h2>
+
         <!-- Project Cards container -->
         <div class="space-y-8">
-          
+
           <!-- PROJECT CARD 1: RAG System -->
           <article class="bg-white rounded-xl p-6 border border-slate-100 card-shadow transition hover:shadow-md">
             <!-- header: title left (blue), date right -->
@@ -108,12 +118,13 @@
               <!-- <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-full"></span> -->
             </div>
             <!-- GitHub button dark -->
-            <a href="https://github.com/Sup4756/Smart-Agriculture-System" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition shadow-sm">
+            <a href="https://github.com/Sup4756/Smart-Agriculture-System"
+              class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition shadow-sm">
               <i data-lucide="github" class="w-4 h-4"></i>
               <span>View on GitHub</span>
             </a>
           </article>
-          
+
           <!-- PROJECT CARD 2: another example (C++ tool) -->
           <article class="bg-white rounded-xl p-6 border border-slate-100 card-shadow transition hover:shadow-md">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -130,12 +141,13 @@
               <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">React</span>
               <span class="px-3 py-1 bg-slate-100 text-slate-700 text-xs rounded-full">NodeJS</span>
             </div>
-            <a href="https://github.com/Sup4756/Smart-School-Bus-Tracking-System" class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition shadow-sm">
+            <a href="https://github.com/Sup4756/Smart-School-Bus-Tracking-System"
+              class="inline-flex items-center gap-2 bg-slate-800 hover:bg-slate-900 text-white text-sm font-medium px-5 py-2.5 rounded-lg transition shadow-sm">
               <i data-lucide="github" class="w-4 h-4"></i>
               <span>View on GitHub</span>
             </a>
           </article>
-          
+
           <!-- PROJECT CARD 3: Python data project (extra to fill) -->
           <article class="bg-white rounded-xl p-6 border border-slate-100 card-shadow transition hover:shadow-md">
             <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
@@ -158,7 +170,7 @@
             </a> -->
           </article>
         </div>
-        
+
         <!-- subtle footnote (can be empty) -->
         <p class="text-xs text-slate-300 mt-8 border-t border-slate-100 pt-4">— more projects on GitHub —</p>
       </main>
@@ -167,10 +179,11 @@
 
   <!-- initialize lucide icons (replace <i> with actual svg) -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       lucide.createIcons();
     });
   </script>
   <!-- ensure map-pin and other icons appear, also for "map-pin" we added -->
 </body>
+
 </html>
